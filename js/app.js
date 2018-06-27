@@ -25,7 +25,7 @@ Enemy.prototype.update = function (dt) {
     // all computers.
     this.x += this.speed * dt;
 
-    // checks for collision with the player
+    // checks for collision with the player which leads to dying 
     if ((player.y >= this.y - 50 && player.y <= this.y + 50) && (player.x >= this.x - 50 && player.x <= this.x + 50)) {
         player.x = 210;
         player.y = 400;
@@ -62,7 +62,9 @@ Player.prototype.update = function (dt) {
 
     if (this.y > 400) {
         this.y = 400;
-    } else if (this.y < 0) {
+    }
+    //if the player gets to the water, (s)he wins
+     else if (this.y < 0) {
         this.x = 210;
         this.y = 400;
         winCount++;
@@ -76,6 +78,7 @@ Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+//implementing the keys to adjust the speed
 Player.prototype.handleInput = function (keypress) {
     switch (keypress) {
         case 'left':
@@ -112,6 +115,7 @@ const allEnemies = [];
     }, 2500);
 }());
 
+//updating the scoreBoard 
 function updateScore() {
     scoreBoard.innerHTML = winCount;
     dieBoard.innerHTML = dieCount;
