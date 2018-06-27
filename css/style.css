@@ -1,0 +1,58 @@
+body {
+    background: url("https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?cs=srgb&dl=abstract-architecture-building-exterior-593158.jpg&fm=jpg") no-repeat center;
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    color: #5169d4;
+    font-size: 30px;
+}
+
+.score {
+    margin-right: 14%;
+}
+
+p {
+    color: #000002;
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+    margin: 0.4%;
+    animation: blink 1s linear infinite;
+}
+
+.bottom-right {
+    color:#73c958;
+    padding:5px;
+    border: 5px solid #d5cabe;
+    position: absolute;
+    bottom: 2px;
+    right: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.score-board {
+    background: #d5cabe;
+    border-top-style: double;
+    border-bottom-style: double;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-color: #0d1a22;
+    border-bottom-color: #0d1a22;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
